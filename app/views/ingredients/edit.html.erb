@@ -1,2 +1,8 @@
-<h1>Ingredients#edit</h1>
-<p>Find me in app/views/ingredients/edit.html.erb</p>
+<h1>Edit <%= @ingredient.name %></h1>
+
+<%= simple_form_for @ingredient do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Edit Ingredient", class: "btn btn-primary" %>
+<% end %>
+
+
