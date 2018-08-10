@@ -1,37 +1,55 @@
-<section class="hero">
-  <div class="row">
-    <div class="col-sm-12 hero-center">
-      <h1>Mister Cocktail</h1>
-      <p>Find the best cocktail recipes</p>
-    </div>
-  </div>
-</section>
+    <section class="cd-section projects visible">
+      <header>
+        <div class="cd-title">
+          <h2>get lit with these recipes</h2>
+          <span>Some text here</span>
+        </div>
 
-<section class="cocktail-list">
-  <div class="row">
-  <div class="col-sm-12">
-    <h2>Recently added cocktails</h2>
-  </div>
-</div>
-<div class="row">
-  <% @cocktails.each do |cocktail| %>
-  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-    <div class="col-sm-6">
-      <img src="https://images.cocktailflow.com/v1/cocktail/w_300,h_540/cocktail_sex_on_the_beach-1.png" alt="" style="height:60px;">
-    </div>
-    <div class="col-sm-6">
-      <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    </div>
-  </div>
-  <% end  %>
-</div>
+        <a href="#projects-content" class="cd-scroll">Scroll Down</a>
+      </header>
+
+      <div class="cd-content" id="projects-content">
+        <!-- <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illo veritatis ea deserunt aliquam blanditiis, voluptas optio, voluptate ut accusamus veniam numquam, porro! Cum minima a molestiae, similique voluptate, perferendis vel iusto quam suscipit delectus dolore ducimus possimus illo molestias voluptas labore optio consequuntur sapiente pariatur libero nam temporibus. Laudantium!
+        </p> -->
+        <div class="cocktail-list">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Recently added cocktails</h2>
+            </div>
+          </div>
+          <div class="row">
+            <% @cocktails.each do |cocktail| %>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="col-sm-6">
+                <img src="https://images.cocktailflow.com/v1/cocktail/w_300,h_540/cocktail_sex_on_the_beach-1.png" alt="" style="height:60px;">
+              </div>
+              <div class="col-sm-6">
+                <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+              </div>
+            </div>
+            <% end  %>
+          </div>
+
+          <hr>
+
+          <p><%= link_to 'Add new cocktail', new_cocktail_path %></p>
+
+        </div>
+      </div> <!-- .cd-content -->
+    </section> <!-- .cd-section -->
+    <div id="cd-loading-bar" data-scale="1" class="projects"></div>
 
 
+    <section class="hero">
+      <div class="row">
+        <div class="col-sm-12 hero-center">
+          <h1>Mister Cocktail</h1>
+          <p>Find the best cocktail recipes</p>
+        </div>
+      </div>
+    </section>
 
-<hr>
 
-<h3><%= link_to 'Add new cocktail', new_cocktail_path %></h3>
-
-</section>
 
 

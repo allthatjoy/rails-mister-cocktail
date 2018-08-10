@@ -12,8 +12,18 @@
 </head>
 
 <body>
+  <main class="cd-main">
+
+    <%= render 'layouts/partials/navbar' %>
 
     <%= yield %>
 
+
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'main' %>
+    <%= javascript_include_tag 'pages' %>
+    <%= javascript_include_tag 'modernizr' %>
+    <%= javascript_include_tag 'jquery-2.1.1' %>
+  </main>
 </body>
 </html>
