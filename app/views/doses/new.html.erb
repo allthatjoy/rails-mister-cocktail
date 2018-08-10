@@ -1,7 +1,12 @@
-<h1>Create a dose</h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+<section class="add-cocktail">
+  <div class="hero">
+    <h1>Create a dose</h1>
+  </div>
 
-  <% if @dose.errors.any? %>
+  <div class="cocktail-list">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+
+    <% if @dose.errors.any? %>
     <div class="errors-container">
       <ul>
         <% @dose.errors.full_messages.each do |message| %>
@@ -9,11 +14,20 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Add Description", class: "btn btn-primary" %>
-<% end %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add Description", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</section>
+
+
+
+
+
+
+
 
 
